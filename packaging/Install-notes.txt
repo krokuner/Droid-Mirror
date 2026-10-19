@@ -1,0 +1,47 @@
+DroidMirror is installed.
+
+WHAT WAS INSTALLED
+
+  DroidMirror.exe   the entire application: Python, Qt, FFmpeg and the Android
+                    platform-tools bundled into one file. Nothing else has to be
+                    installed -- no Python, no Node, no adb.
+
+  Installed to      C:\ProgramData\DroidMirror\   (all users on this PC)
+
+FIRST RUN
+
+  Windows SmartScreen will warn about this file, because it is not code-signed.
+  Choose "More info", then "Run anyway". If the antivirus quarantines it, allow
+  it again from Protection history -- a self-contained one-file executable is
+  the same shape as what packers produce, so it gets flagged by heuristic.
+
+  If it will not start at all: right-click the desktop shortcut, open the file
+  location, then right-click DroidMirror.exe -> Properties -> tick "Unblock".
+
+USING IT
+
+  Plug the phone in over USB with USB debugging enabled, press Connect.
+  The scrcpy device server is cached in C:\ProgramData\DroidMirror\vendor\ on
+  first run, so later launches do not need a network connection.
+
+  If Windows shows "Select an app to open 'download'" you are holding a file
+  whose .exe extension was stripped by a download or chat service -- rename it
+  back to DroidMirror.exe and it will run.
+
+WHERE YOUR STUFF IS KEPT
+
+  C:\ProgramData\DroidMirror\
+    settings.json   window state, Discord application id, device filter
+    profiles\       your keybind profiles, one JSON file each
+    icons\          cached app icons and the Discord asset urls for them
+    crash.log       the trace from the most recent crash, if there was one
+
+  That folder is shared by every Windows user on this machine, so profiles are
+  shared too. To give one user a separate set, launch it with the environment
+  variable DROIDMIRROR_HOME pointing somewhere in that user's own profile.
+
+UNINSTALLING
+
+  Settings, Apps, "DroidMirror", or the Uninstall entry in the Start Menu folder.
+  The uninstaller asks whether to keep your profiles and cached server; say no
+  to remove every trace of the application.

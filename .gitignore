@@ -1,0 +1,42 @@
+.venv/
+.tmp/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# Promo video workspace: the rendered mp4 (33 MB) is a release asset, not source
+promo/*.mp4
+promo/takes/
+
+# Packaged copies of the source itself -- the repo is the source
+DroidMirror-source.zip
+
+# Stray zero-byte file from a misfired shell redirect
+str
+
+# Downloaded scrcpy device server binaries
+vendor/
+
+# Local keybind profiles
+profiles/
+
+# UI preferences. settings.json holds the Discord application id *and, if the
+# user supplied one, a Discord login token in plain text* (see README,
+# "Discord Rich Presence"). It is a per-machine secret: never commit it.
+settings.json
+
+# Icons pulled off the device and the CDN urls Discord handed back, cached
+# locally. Regenerated on demand; nothing worth versioning.
+icons/
+
+# Crash output from the most recent run
+crash.log
+
+# Coverage data
+.coverage
+.coverage.*
+htmlcov/

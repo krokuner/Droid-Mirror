@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "droidmirror"
+version = "0.1.0"
+description = "Ultra-low-latency Android screen mirroring over USB with on-screen keybind mapping"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6",
+    "av>=12.0",
+    "numpy>=1.24",
+    "PyOpenGL>=3.1.6",
+    "sounddevice>=0.4.6",
+    "pypresence>=4.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.gui-scripts]
+droidmirror = "droidmirror.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.droidmirror]
+# scrcpy device-server version this client speaks. Must match exactly on both
+# sides: scrcpy refuses to run if client and server versions differ.
+scrcpy_version = "4.1"
