@@ -202,8 +202,8 @@ def find_adb() -> str | None:
         from .config import bundle_root, is_frozen, project_root
 
         if is_frozen():
-            #: A frozen build carries its own copy (see packaging/DroidMirror.spec)
-            #: which PyInstaller unpacks under `_MEIPASS`, not beside the .exe.
+            #: A frozen build carries its own copy of platform-tools, which
+            #: PyInstaller unpacks under `_MEIPASS`, not beside the .exe.
             candidates.append(
                 bundle_root() / "vendor" / "platform-tools" / _exe("adb")
             )

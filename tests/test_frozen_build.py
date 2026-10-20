@@ -2,8 +2,8 @@
 
 A frozen executable has no repository next to it: PyInstaller unpacks read-only
 payload into ``sys._MEIPASS`` and deletes it on exit, so anything the app *writes*
-has to resolve beside the .exe instead. `packaging/DroidMirror.spec` only makes
-sense if these two directories stay split, which is what these tests pin.
+has to resolve beside the .exe instead. A one-file build only works if these two
+directories stay split, which is what these tests pin.
 """
 
 from __future__ import annotations

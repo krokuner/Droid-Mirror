@@ -22,7 +22,7 @@ fragment shader) and falls back to a CPU path where GL is unavailable.
 **No Python on the target machine?** Grab the installer from
 [Releases](../../releases/latest) — `DroidMirror-Setup.exe` installs the whole
 app (Python, Qt, FFmpeg and `adb` inside one file) and puts a shortcut on the
-desktop. Build instructions for that are in [packaging/BUILD.md](packaging/BUILD.md).
+desktop.
 
 ---
 
@@ -53,7 +53,8 @@ Qt, FFmpeg and the Android platform-tools in one file. It installs to
 no `pip` and no `adb` on the machine. It is unsigned, so SmartScreen warns once
 (*More info* → *Run anyway*).
 
-To build it yourself: [packaging/BUILD.md](packaging/BUILD.md).
+The installer is a prebuilt artifact; there is no packaging pipeline in this
+repository, so the clone-and-run path above is the way to build from source.
 
 ## Verify your setup
 

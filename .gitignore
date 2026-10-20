@@ -8,10 +8,6 @@ dist/
 .pytest_cache/
 .mypy_cache/
 
-# Promo video workspace: the rendered mp4 (33 MB) is a release asset, not source
-promo/*.mp4
-promo/takes/
-
 # Packaged copies of the source itself -- the repo is the source
 DroidMirror-source.zip
 
